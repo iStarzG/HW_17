@@ -24,7 +24,7 @@ public interface DriverConfig extends Config {
     @Key("browser.remote.url")
     String browserRemoteUrl();
 
-    @DefaultValue("https://www.drive2.ru/")
+    @DefaultValue("https://www.drom.ru/")
     @Key("browser.base.url")
     String browserBaseUrl();
 

@@ -18,7 +18,7 @@ public class RegistrationPage {
 
     @Step("Открытие браузера и закрытие футера")
     public RegistrationPage openPage() {
-        open("https://www.drive2.ru/");
+        open("https://www.drom.ru/");
         return this;
     }
 
