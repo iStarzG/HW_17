@@ -44,7 +44,6 @@ tasks.withType(Test) {
 
 task  drive_test(type: Test) {
     useJUnitPlatform {
-        includeTags("Registration")
-        includeTags("Search")
+        includeTags("OpenDrom")
     }
 }
