@@ -1,15 +1,16 @@
-package tests;
+package tests.localTests;
 
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.CombinedTestPages;
-import pages.components.TestRandomData;
+import pages.components.LocalDriveTestRandomData;
+import pages.localPages.CombinedTestDrive2Pages;
 
-public class CombinedTest extends TestBase{
-    TestRandomData testData = new TestRandomData();
-    CombinedTestPages combiTest = new CombinedTestPages();
+
+public class CombinedTest extends LocalTestBase {
+    LocalDriveTestRandomData testData = new LocalDriveTestRandomData();
+    CombinedTestDrive2Pages combiTest = new CombinedTestDrive2Pages();
     @Test
     @Owner("iStarzG")
     @Tag("Search")

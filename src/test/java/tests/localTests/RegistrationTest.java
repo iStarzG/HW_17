@@ -1,21 +1,22 @@
-package tests;
+package tests.localTests;
 
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
-import pages.components.TestRandomData;
+import pages.components.LocalDriveTestRandomData;
+import pages.localPages.RegistrationDrive2Page;
 
-public class RegistrationTest extends TestBase{
-    TestRandomData testRandomData = new TestRandomData();
-    RegistrationPage registrationPage = new RegistrationPage();
+
+public class RegistrationTest extends LocalTestBase {
+    LocalDriveTestRandomData testRandomDriveData = new LocalDriveTestRandomData();
+    RegistrationDrive2Page registrationDrive2Page = new RegistrationDrive2Page();
     @Test
     @Owner("iStarzG")
     @Tag("Registration")
     @DisplayName("Проверка ошибки регистрации с пустыми полями")
     void registrationWithEmptyValues () {
-        registrationPage.openPage()
+        registrationDrive2Page.openPage()
                 .buttonRegClick()
                 .buttonSubmit()
                 .mailCheckOut();
@@ -26,10 +27,10 @@ public class RegistrationTest extends TestBase{
     @Tag("Registration")
     @DisplayName("Вывод на следующий этап регистрации после введения почты и телефона")
     void SuccesfulRegistrationWithMailAndNumber () {
-        registrationPage.openPage()
+        registrationDrive2Page.openPage()
                 .buttonRegClick()
-                .inputCurrentMail(testRandomData.emailName)
-                .inputCurrentPhoneAndPressEnter(testRandomData.numberPhone)
+                .inputCurrentMail(testRandomDriveData.emailName)
+                .inputCurrentPhoneAndPressEnter(testRandomDriveData.numberPhone)
                 .modalOpenCheckResults();
 
     }
