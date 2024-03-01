@@ -16,13 +16,13 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         DriverConfig driverConfig = ConfigFactory.create(DriverConfig.class);
-          System.setProperty("environment", System.getProperty("environment", "stage"));
+        System.setProperty("environment", System.getProperty("environment", "stage"));
         Configuration.baseUrl = driverConfig.browserBaseUrl();
         Configuration.pageLoadStrategy = driverConfig.pageLoadStrategy();
-          Configuration.browser = driverConfig.browserName();
-          Configuration.browserVersion = driverConfig.browserVersion();
+        Configuration.browser = driverConfig.browserName();
+        Configuration.browserVersion = driverConfig.browserVersion();
         Configuration.browserSize = driverConfig.browserSize();
-         Configuration.remote = driverConfig.browserRemoteUrl();
+        Configuration.remote = driverConfig.browserRemoteUrl();
         //Configuration.holdBrowserOpen = true;
 
 

@@ -16,9 +16,34 @@ public class AvitoCombinedTests extends TestBase {
     @Owner("iStarzG")
     @Tag("Perfomance")
     @DisplayName("Проверка работоспособности открытия категорий в главном блоке на главной странице")
-    void CheckingMainCategoryBlockTest () {
+    void CheckingMainCategoryBlockTest() {
         perfomancePages.openPage()
                 .selectRandomCategory(randomData.selectCategory)
                 .checkCategoryResult(randomData.selectCategory);
+    }
+
+    @Test
+    @Owner("iStarzG")
+    @Tag("Perfomance")
+    @DisplayName("Проверка работоспособности кнопки Вход и регистрации")
+    void checkingFuncionalityButtonRegistrationTest() {
+        perfomancePages.openPage()
+                .checkButtonRegistration()
+                .checkOpenModule();
+
+    }
+
+    @Test
+    @Owner("iStarzG")
+    @Tag("Perfomance")
+    @DisplayName("Проверка выбора города и работоспособности выбора города")
+    void checkInputCity() {
+        perfomancePages.openPage()
+                .clickInputCity()
+                .clearCityName()
+                .inputCityName(randomData.selectRandomCity)
+                .inputOptionCity(randomData.selectRandomCity)
+                .clickButtonCityResults()
+                .checkResultCitySelect(randomData.selectRandomCity);
     }
 }
