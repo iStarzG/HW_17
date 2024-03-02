@@ -40,7 +40,7 @@ public class AvitoCombinedTests extends TestBase {
     void checkInputCity() {
         perfomancePages.openPage()
                 .clickInputCity()
-                .clearCityName()
+              //  .clearCityName()
                 .inputCityName(randomData.selectRandomCity)
                 .inputOptionCity(randomData.selectRandomCity)
                 .clickButtonCityResults()
