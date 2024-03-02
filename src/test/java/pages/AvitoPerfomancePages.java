@@ -32,7 +32,8 @@ public class AvitoPerfomancePages {
     tableCalendarDualName = $x("//div[2]/table/tbody/tr[4]/td[6]/div"),
     calendarCloseName = $x("//div[2]/div/div/div/div/div[2]/button/span"),
     randomAddName = $x("//div[5]/div/div/div[2]/div/a/h3"),
-    addNameVisible = $(".style-title-info-_liyt");
+    addNameVisible = $(".style-title-info-_liyt"),
+    buttonHelpName = $(".index-module-nav-link-YtJag");
 
 
     @Step("Открытие браузера и нужной страницы")
@@ -67,6 +68,7 @@ public class AvitoPerfomancePages {
 
     @Step("Нажатие на кнопку выбора города")
     public AvitoPerfomancePages clickInputCity() {
+        sleep(2000);
         clickInputCity.click();
         return this;
     }
@@ -177,6 +179,10 @@ public class AvitoPerfomancePages {
     public AvitoPerfomancePages visibleOpenPage () {
         sleep(5000);
         addNameVisible.shouldBe();
+        return this;
+    }
+    public AvitoPerfomancePages clickButtonHelp () {
+        buttonHelpName.click();
         return this;
     }
 }
