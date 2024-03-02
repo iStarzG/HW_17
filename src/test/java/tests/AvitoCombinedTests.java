@@ -40,7 +40,7 @@ public class AvitoCombinedTests extends TestBase {
     void checkInputCity() {
         perfomancePages.openPage()
                 .clickInputCity()
-              //  .clearCityName()
+                .clearCityName()
                 .inputCityName(randomData.selectRandomCity)
                 .inputOptionCity(randomData.selectRandomCity)
                 .clickButtonCityResults()
@@ -98,5 +98,9 @@ public class AvitoCombinedTests extends TestBase {
                 .openAdd()
                 .visibleOpenPage();
     }
+//    @Test
+//    @Owner("iStarzG")
+//    @Tag("Perfomance")
+//    @DisplayName("Проверка наличия и работоспособности кнопки Помощь")
 }
 

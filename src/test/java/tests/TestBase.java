@@ -22,8 +22,8 @@ public class TestBase {
         Configuration.browser = driverConfig.browserName();
         Configuration.browserVersion = driverConfig.browserVersion();
         Configuration.browserSize = driverConfig.browserSize();
-        Configuration.remote = driverConfig.browserRemoteUrl();
-       // Configuration.holdBrowserOpen = true;
+       // Configuration.remote = driverConfig.browserRemoteUrl();
+        Configuration.holdBrowserOpen = true;
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
