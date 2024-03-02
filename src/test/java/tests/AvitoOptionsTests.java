@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import pages.AvitoPerfomancePages;
 import pages.components.AvitoTestRandomData;
 
-public class AvitoCombinedTests extends TestBase {
+public class AvitoOptionsTests extends TestBase {
     AvitoPerfomancePages perfomancePages = new AvitoPerfomancePages();
     AvitoTestRandomData randomData = new AvitoTestRandomData();
 
@@ -98,9 +98,25 @@ public class AvitoCombinedTests extends TestBase {
                 .openAdd()
                 .visibleOpenPage();
     }
-//    @Test
-//    @Owner("iStarzG")
-//    @Tag("Perfomance")
-//    @DisplayName("Проверка наличия и работоспособности кнопки Помощь")
+    @Test
+    @Owner("iStarzG")
+    @Tag("Perfomance")
+    @DisplayName("Проверка наличия и работоспособности кнопки Помощь")
+    void checkOptionHelpButton () {
+        perfomancePages.openPage()
+                .clickButtonHelp()
+                .checkResultHelpButton();
+    }
+    @Test
+    @Owner("iStarzG")
+    @Tag("Perfomance")
+    @DisplayName("Открытие объявление и добавление в избранное")
+    void checkFavoritesAddCheck () {
+        perfomancePages.openPageFavorite()
+                .clickFavoritesButton()
+                .buttonClickFavorites()
+                .checkFavorites();
+
+    }
 }
 

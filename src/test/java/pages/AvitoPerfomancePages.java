@@ -33,7 +33,11 @@ public class AvitoPerfomancePages {
     calendarCloseName = $x("//div[2]/div/div/div/div/div[2]/button/span"),
     randomAddName = $x("//div[5]/div/div/div[2]/div/a/h3"),
     addNameVisible = $(".style-title-info-_liyt"),
-    buttonHelpName = $(".index-module-nav-link-YtJag");
+    buttonHelpName = $x("//a[contains(text(),'Помощь')]"),
+    helpResultName = $("._1agAUwZfOLyww_mmrX31X0"),
+    favoritesButtonName = $(".desktop-1l3k1vq"),
+    buttonClickFavoritesName = $(".desktop-1gzlbya"),
+    favoritesName = $(".index-container-MxQrS");
 
 
     @Step("Открытие браузера и нужной страницы")
@@ -181,8 +185,32 @@ public class AvitoPerfomancePages {
         addNameVisible.shouldBe();
         return this;
     }
+    @Step("Нажатие кнопки Помощь")
     public AvitoPerfomancePages clickButtonHelp () {
+        sleep(2000);
         buttonHelpName.click();
+        return this;
+    }
+    @Step("Проверка работоспособности кнопки Помощь и открытия нужной страницы")
+    public AvitoPerfomancePages  checkResultHelpButton () {
+        sleep(2000);
+        helpResultName.shouldBe();
+        return this;
+    }
+    public AvitoPerfomancePages clickFavoritesButton () {
+        favoritesButtonName.click();
+        return this;
+    }
+    public AvitoPerfomancePages openPageFavorite () {
+        open("https://www.avito.ru/ekaterinburg/kvartiry/1-k._kvartira_32m_45et._3821896165");
+        return this;
+    }
+    public AvitoPerfomancePages buttonClickFavorites () {
+        buttonClickFavoritesName.click();
+        return this;
+    }
+    public AvitoPerfomancePages checkFavorites () {
+        favoritesName.shouldHave(text("Избранное"));
         return this;
     }
 }
