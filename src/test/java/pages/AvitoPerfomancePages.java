@@ -19,7 +19,12 @@ public class AvitoPerfomancePages {
             inputCity = $(".suggest-input-rORJM"),
             buttonClear = $(".icon-icon-jrOym"),
             selectOptionCity = $x("//li[contains(.,'" + randomData.selectRandomCity + "')]"),
-            buttonResultCityName = $(".desktop-xujs2d");
+            buttonResultCityName = $(".desktop-xujs2d"),
+    searchBarName = $(".input-input-Zpzc1"),
+    searchResultName = $(".page-title-text-tSffu page-title-inline-zBPFx"),
+    buttonDeliveryName = $x("//h4[contains(.,'Доставка')]"),
+    closeCity = $(".desktop-smz193"),
+    buttonAutotekaName = $x("//h4[contains(.,'Автотека')]");
 
 
     @Step("Открытие браузера и нужной страницы")
@@ -85,6 +90,42 @@ public class AvitoPerfomancePages {
     @Step("Проверка изменения города на главной странице на выбранный город {value}")
     public AvitoPerfomancePages checkResultCitySelect(String value) {
         clickInputCity.shouldHave(text(randomData.selectRandomCity));
+        return this;
+    }
+    @Step("Ввод в поисковую строку {value} и нажатие enter")
+    public AvitoPerfomancePages inputSearchBar (String value) {
+        searchBarName.setValue(randomData.randomSearchData).sendKeys(Keys.ENTER);
+        return this;
+    }
+    @Step("Проверка выдачи результатов при поиске {value} через поисковую строку")
+    public AvitoPerfomancePages searchResultCheck (String value) {
+        searchResultName.shouldBe();
+        return this;
+    }
+    @Step("Соглашение на выбор предложенного города")
+    public AvitoPerfomancePages agreementCity () {
+        closeCity.click();
+        sleep(2000);
+        return this;
+    }
+    @Step("Проверка наличия кнопки Доставка")
+    public AvitoPerfomancePages visibleDeliveryButton () {
+        buttonDeliveryName.shouldBe();
+        return this;
+    }
+    @Step("Нажатие и проверка работоспособности кнопки Доставка")
+    public AvitoPerfomancePages checkDeliveryButton () {
+        buttonDeliveryName.click();
+        return this;
+    }
+    @Step("Проверка наличия кнопки Автотека")
+    public AvitoPerfomancePages buttonAutotekaVisible () {
+        buttonAutotekaName.shouldBe();
+        return this;
+    }
+    @Step("Нажатие и проверка работоспособности кнопки Автотека")
+    public AvitoPerfomancePages buttonAutotekaClick () {
+        buttonAutotekaName.click();
         return this;
     }
 }

@@ -46,4 +46,34 @@ public class AvitoCombinedTests extends TestBase {
                 .clickButtonCityResults()
                 .checkResultCitySelect(randomData.selectRandomCity);
     }
+    @Test
+    @Owner("iStarzG")
+    @Tag("Perfomance")
+    @DisplayName("Проверка работы поисковой строки и вывод необходимых результатов")
+    void checkSearchBar () {
+        perfomancePages.openPage()
+                .inputSearchBar(randomData.randomSearchData)
+                .searchResultCheck(randomData.randomSearchData);
+    }
+    @Test
+    @Owner("iStarzG")
+    @Tag("Perfomance")
+    @DisplayName("Проверка наличия и работоспособности кнопки Доставка в блоке Сервисы и услуги Авито")
+    void checkButtonDelivery () {
+        perfomancePages.openPage()
+                .agreementCity()
+                .visibleDeliveryButton()
+                .checkDeliveryButton();
+    }
+    @Test
+    @Owner("iStarzG")
+    @Tag("Perfomance")
+    @DisplayName("Проверка наличия и работоспособности кнопки Автотека")
+    void checkButtonAutoteka () {
+        perfomancePages.openPage()
+                .agreementCity()
+                .buttonAutotekaVisible()
+                .buttonAutotekaClick();
+    }
 }
+
