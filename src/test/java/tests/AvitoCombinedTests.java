@@ -61,9 +61,10 @@ public class AvitoCombinedTests extends TestBase {
     @DisplayName("Проверка наличия и работоспособности кнопки Доставка в блоке Сервисы и услуги Авито")
     void checkButtonDelivery () {
         perfomancePages.openPage()
-                //.agreementCity()
+                //.agreementCity() //Для локального запуска
                 .visibleDeliveryButton()
-                .checkDeliveryButton();
+                .checkDeliveryButton()
+                .checkResultDelivery();
     }
     @Test
     @Owner("iStarzG")
@@ -71,9 +72,31 @@ public class AvitoCombinedTests extends TestBase {
     @DisplayName("Проверка наличия и работоспособности кнопки Автотека")
     void checkButtonAutoteka () {
         perfomancePages.openPage()
-                //.agreementCity()
+                //.agreementCity() //Для локального запуска
                 .buttonAutotekaVisible()
-                .buttonAutotekaClick();
+                .buttonAutotekaClick()
+                .autotekaResultsCheck();
+    }
+    @Test
+    @Owner("iStarzG")
+    @Tag("Perfomance")
+    @DisplayName("Проверка работоспособности выбора срока аренды квартиры с помощью календаря")
+    void checkCalendarOption () {
+        perfomancePages.openPageRent()
+                .selectFirstDate()
+                .selectEndDate()
+                .calendarClose();
+    }
+
+
+    @Test
+    @Owner("iStarzG")
+    @Tag("Perfomance")
+    @DisplayName("Проверка открытия объявления из предложенных")
+    void checkAddOpenTest () {
+        perfomancePages.openPage()
+                .openAdd()
+                .visibleOpenPage();
     }
 }
 

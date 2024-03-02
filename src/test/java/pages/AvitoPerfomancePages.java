@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import pages.components.AvitoTestRandomData;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AvitoPerfomancePages {
@@ -23,8 +24,15 @@ public class AvitoPerfomancePages {
     searchBarName = $(".input-input-Zpzc1"),
     searchResultName = $(".page-title-text-tSffu page-title-inline-zBPFx"),
     buttonDeliveryName = $x("//h4[contains(.,'Доставка')]"),
+    deliveryCheckResultName = $(".header-section-about-_KT2g"),
     closeCity = $(".desktop-smz193"),
-    buttonAutotekaName = $x("//h4[contains(.,'Автотека')]");
+    buttonAutotekaName = $x("//h4[contains(.,'Автотека')]"),
+    autotekaResult = $(".header-main-title-TDDlr"),
+    tableCalendarName = $x("//div/div/div/div/table/tbody/tr[3]/td[3]/div"),
+    tableCalendarDualName = $x("//div[2]/table/tbody/tr[4]/td[6]/div"),
+    calendarCloseName = $x("//div[2]/div/div/div/div/div[2]/button/span"),
+    randomAddName = $x("//div[5]/div/div/div[2]/div/a/h3"),
+    addNameVisible = $(".style-title-info-_liyt");
 
 
     @Step("Открытие браузера и нужной страницы")
@@ -118,6 +126,12 @@ public class AvitoPerfomancePages {
         buttonDeliveryName.click();
         return this;
     }
+    @Step("Проверка открытия нужной страницы Авито Доставка")
+    public AvitoPerfomancePages checkResultDelivery () {
+        sleep(5000);
+        deliveryCheckResultName.$(byText("Авито Доставка"));
+        return this;
+    }
     @Step("Проверка наличия кнопки Автотека")
     public AvitoPerfomancePages buttonAutotekaVisible () {
         buttonAutotekaName.shouldBe();
@@ -126,6 +140,43 @@ public class AvitoPerfomancePages {
     @Step("Нажатие и проверка работоспособности кнопки Автотека")
     public AvitoPerfomancePages buttonAutotekaClick () {
         buttonAutotekaName.click();
+        return this;
+    }
+    @Step("Проверка открытия нужной страницы")
+    public AvitoPerfomancePages autotekaResultsCheck () {
+        sleep(5000);
+        autotekaResult.shouldBe();
+        return this;
+    }
+    @Step("Открытие страницы Онлайн-бронирование жилья")
+    public AvitoPerfomancePages openPageRent () {
+        open("https://www.avito.ru/all/kvartiry/sdam/posutochno/-ASgBAgICAkSSA8gQ8AeSUg?f=ASgBAQICAkSSA8gQ8AeSUgFAlC4Utr4C");
+        return this;
+    }
+    @Step("Выбор в календаре день заезда")
+    public AvitoPerfomancePages selectFirstDate () {
+        tableCalendarName.click();
+        return this;
+    }
+    @Step("Выбор в календаре день выезда")
+    public AvitoPerfomancePages selectEndDate () {
+        tableCalendarDualName.click();
+        return this;
+    }
+    @Step("Клик и проверка закрытия календаря")
+    public AvitoPerfomancePages calendarClose () {
+        calendarCloseName.click();
+        return this;
+    }
+    @Step("Открытие предложенного объявления")
+    public AvitoPerfomancePages openAdd () {
+        randomAddName.click();
+        return this;
+    }
+    @Step("Проверка открытия объявления")
+    public AvitoPerfomancePages visibleOpenPage () {
+        sleep(5000);
+        addNameVisible.shouldBe();
         return this;
     }
 }
