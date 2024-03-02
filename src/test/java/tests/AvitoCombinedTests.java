@@ -61,7 +61,7 @@ public class AvitoCombinedTests extends TestBase {
     @DisplayName("Проверка наличия и работоспособности кнопки Доставка в блоке Сервисы и услуги Авито")
     void checkButtonDelivery () {
         perfomancePages.openPage()
-                .agreementCity()
+                //.agreementCity()
                 .visibleDeliveryButton()
                 .checkDeliveryButton();
     }
@@ -71,7 +71,7 @@ public class AvitoCombinedTests extends TestBase {
     @DisplayName("Проверка наличия и работоспособности кнопки Автотека")
     void checkButtonAutoteka () {
         perfomancePages.openPage()
-                .agreementCity()
+                //.agreementCity()
                 .buttonAutotekaVisible()
                 .buttonAutotekaClick();
     }
