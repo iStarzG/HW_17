@@ -202,7 +202,7 @@ public class AvitoPerfomancePages {
         return this;
     }
     public AvitoPerfomancePages openPageFavorite () {
-        open("https://www.avito.ru/ekaterinburg/kvartiry/1-k._kvartira_32m_45et._3821896165");
+        open("https://www.avito.ru/ekaterinburg/avtomobili/bmw_5_seriya_2.5_at_2005_bityy_309000km_4113787883");
         return this;
     }
     public AvitoPerfomancePages buttonClickFavorites () {
