@@ -41,7 +41,6 @@ public class AvitoPerfomancePages {
             addNameVisible = $(".style-title-info-_liyt"),
             buttonHelpName = $x("//a[contains(text(),'Помощь')]"),
             helpResultName = $("._1agAUwZfOLyww_mmrX31X0"),
-            favoritesButtonName = $x("//span[contains(.,'Добавить в избранное')]"),
             buttonClickFavoritesName = $(".desktop-1gzlbya"),
             favoritesName = $(".index-container-MxQrS");
 
