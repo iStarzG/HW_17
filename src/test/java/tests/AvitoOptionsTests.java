@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.AvitoPerfomancePages;
 import pages.components.AvitoTestRandomData;
+
 @Tag("Perfomance")
 public class AvitoOptionsTests extends TestBase {
     AvitoPerfomancePages perfomancePages = new AvitoPerfomancePages();
@@ -18,7 +19,7 @@ public class AvitoOptionsTests extends TestBase {
     void CheckingMainCategoryBlockTest() {
         perfomancePages.openPage()
                 .selectRandomCategory(randomData.selectCategory)
-                .checkCategoryResult(randomData.selectCategory);
+                .checkCategoryResult();
     }
 
     @Test
@@ -43,38 +44,42 @@ public class AvitoOptionsTests extends TestBase {
                 .clickButtonCityResults()
                 .checkResultCitySelect(randomData.selectRandomCity);
     }
+
     @Test
     @Owner("iStarzG")
     @DisplayName("Проверка работы поисковой строки и вывод необходимых результатов")
-    void checkSearchBar () {
+    void checkSearchBar() {
         perfomancePages.openPage()
                 .inputSearchBar(randomData.randomSearchData)
-                .searchResultCheck(randomData.randomSearchData);
+                .searchResultCheck();
     }
+
     @Test
     @Owner("iStarzG")
     @DisplayName("Проверка наличия и работоспособности кнопки Доставка в блоке Сервисы и услуги Авито")
-    void checkButtonDelivery () {
+    void checkButtonDelivery() {
         perfomancePages.openPage()
                 //.agreementCity() //Для локального запуска
                 .visibleDeliveryButton()
                 .checkDeliveryButton()
                 .checkResultDelivery();
     }
+
     @Test
     @Owner("iStarzG")
     @DisplayName("Проверка наличия и работоспособности кнопки Автотека")
-    void checkButtonAutoteka () {
+    void checkButtonAutoteka() {
         perfomancePages.openPage()
                 //.agreementCity() //Для локального запуска
                 .buttonAutotekaVisible()
                 .buttonAutotekaClick()
                 .autotekaResultsCheck();
     }
+
     @Test
     @Owner("iStarzG")
     @DisplayName("Проверка работоспособности выбора срока аренды квартиры с помощью календаря")
-    void checkCalendarOption () {
+    void checkCalendarOption() {
         perfomancePages.openPageRent()
                 .selectFirstDate()
                 .selectEndDate()
@@ -85,25 +90,26 @@ public class AvitoOptionsTests extends TestBase {
     @Test
     @Owner("iStarzG")
     @DisplayName("Проверка открытия объявления из предложенных")
-    void checkAddOpenTest () {
+    void checkAddOpenTest() {
         perfomancePages.openPage()
                 .openAdd()
                 .visibleOpenPage();
     }
+
     @Test
     @Owner("iStarzG")
     @DisplayName("Проверка наличия и работоспособности кнопки Помощь")
-    void checkOptionHelpButton () {
+    void checkOptionHelpButton() {
         perfomancePages.openPage()
                 .clickButtonHelp()
                 .checkResultHelpButton();
     }
+
     @Test
     @Owner("iStarzG")
-    @DisplayName("Открытие объявление и добавление в избранное")
-    void checkFavoritesAddCheck () {
-        perfomancePages.openPageFavorite()
-                .clickFavoritesButton()
+    @DisplayName("Проверка работоспособности кнопки открытия вкладки избранное")
+    void checkFavoritesAddCheck() {
+        perfomancePages.openPage()
                 .buttonClickFavorites()
                 .checkFavorites();
 

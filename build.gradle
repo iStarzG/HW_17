@@ -42,7 +42,7 @@ tasks.withType(Test) {
     }
 }
 
-task  avito_test(type: Test) {
+task avito_test(type: Test) {
     useJUnitPlatform {
         includeTags("Perfomance")
 
