@@ -57,7 +57,7 @@ public class AvitoPerfomancePages {
         return this;
     }
 
-    @Step("Проверка открытия нужной страницы при выборе категории {value}")
+    @Step("Проверка открытия нужной страницы")
     public AvitoPerfomancePages checkCategoryResult() {
         categoryResult.shouldBe();
         return this;
