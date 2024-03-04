@@ -12,7 +12,7 @@
 - [Интеграция с Allure TestOps](#-интеграция-с-allure-testOps)
 - [Интеграция с Jira](#-интеграция-с-jira)
 - [Уведомления в Telegram](#-уведомления-в-telegram-с-использованием-бота)
-- [Видео примера запуска тестов в Selenoid дистанционно](#-img-width4-stylevertical-alignmiddle-titleselenoid-srcmediascreenslogoselenoidsvg-видео-примера-запуска-тестов-в-selenoid-дистанционно)
+- [Видео примера запуска тестов в Selenoid дистанционно](#-видео-примера-запуска-тестов-в-selenoid-дистанционно)
 
 ## :computer: Используемый стек
 
