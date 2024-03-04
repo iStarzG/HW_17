@@ -11,8 +11,8 @@
 - [Пример Allure-отчета](#-пример-allure-отчета)
 - [Интеграция с Allure TestOps](#-интеграция-с-allure-testOps)
 - [Интеграция с Jira](#-интеграция-с-jira)
-- [Уведомления в Telegram](#img-width4-stylevertical-alignmiddle-titletelegram-srcmediascreenslogotelegramsvg-уведомления-в-telegram-с-использованием-бота)
-- [Видео примера запуска тестов в Selenoid дистанционно](#img-width4-stylevertical-alignmiddle-titleselenoid-srcmediascreenslogoselenoidsvg-видео-примера-запуска-тестов-в-selenoid-дистанционно)
+- [Уведомления в Telegram](#-img-width4-stylevertical-alignmiddle-titletelegram-srcmediascreenslogotelegramsvg-уведомления-в-telegram-с-использованием-бота)
+- [Видео примера запуска тестов в Selenoid дистанционно](#-img-width4-stylevertical-alignmiddle-titleselenoid-srcmediascreenslogoselenoidsvg-видео-примера-запуска-тестов-в-selenoid-дистанционно)
 
 ## :computer: Используемый стек
 
