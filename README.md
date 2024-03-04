@@ -98,7 +98,7 @@ gradle clean avito_test -Denvironment=${ENVIRONMENT} -Dbrowser.name=${BROWSER_NA
 <img title="Jira Task" src="media/screens/JiraScreen.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/screens/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+### <img width="4%" style="vertical-align:middle" title="Telegram" src="media/screens/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
@@ -106,7 +106,7 @@ gradle clean avito_test -Denvironment=${ENVIRONMENT} -Dbrowser.name=${BROWSER_NA
 <img width="70%" title="Telegram Notifications" src="media/screens/NotificationsScreen.jpg">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/screens/logo/Selenoid.svg"> Видео примера запуска тестов в Selenoid дистанционно
+### <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/screens/logo/Selenoid.svg"> Видео примера запуска тестов в Selenoid дистанционно
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео после прохождения теста
 <p align="center">
